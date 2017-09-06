@@ -1,0 +1,76 @@
+body, html {
+	padding: 0;
+  margin: 0;
+  background-color: #fdfdfd;
+  text-align: left;
+}
+nav {
+	display: inline-block;
+  background-color: #214055;
+  width: 100%;
+  font-size: 12px;
+  padding: 0 80px;
+  box-sizing: border-box;
+}
+nav a {
+  text-decoration: none;
+  color: #fff;
+  margin: 0 10px;
+  line-height: 36px;
+  height: 36px;
+  font-weight: 600;
+}
+#input {
+	float: right;
+  margin-right: 80px;
+  position: relative;
+}
+.main-content {
+	width: 100%;
+  background-color: #eee;
+  position: relative;
+  height: 85%;
+}
+.sub-content {
+  margin-right: 8%;
+  margin-left: 8%;
+  width: 80%;
+  background-color: #fff;
+  position: relative;
+  height: 85%;
+  box-shadow: 1px 2px 2px #eaeaea;
+}
+.recent-news {
+	display: inline-block
+	width: 40%;
+  border: 1px solid #ededed
+  margin: 20px auto;
+  padding: 5px;
+}
+.recent-img img {
+  float: left;
+  width: 300px;
+  height: 150px;
+ 
+}
+.img-description h4 {
+  font-family: 'Pontano Sans', sans-serif;
+  text-align: left;
+  font-size: 12px;
+  color: grey;
+  text-transform: uppercase;
+}
+.img-description h2 {
+	font-family: 'Ruda', sans-serif;
+  font-size: 24px;
+  color: #0e3c6d;
+  position: relative;
+  text-align: left;
+} 
+
+.img-description p {
+	text-align: left;
+	line-height: 22px;
+	margin-top: 0;
+}
+
