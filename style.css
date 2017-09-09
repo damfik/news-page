@@ -29,7 +29,7 @@ nav a {
 	width: 100%;
   background-color: #eee;
   position: relative;
-  height: 85%;
+  height: 100%;
 }
 .sub-content {
   margin-right: 8%;
@@ -37,21 +37,21 @@ nav a {
   width: 80%;
   background-color: #fff;
   position: relative;
-  height: 85%;
+  height: 100%;
   box-shadow: 1px 2px 2px #eaeaea;
 }
 .recent-news {
-	display: inline-block
-	width: 40%;
-  border: 1px solid #ededed
-  margin: 20px auto;
+	display: inline-block;
+  width: 70%;
+  border: 1px solid #ededed;
+  margin: 10px 10px;
   padding: 5px;
 }
 .recent-img img {
   float: left;
-  width: 300px;
-  height: 150px;
- 
+  width: 350px;
+  height: 250px;
+  margin:0 20px 10px 10px;
 }
 .img-description h4 {
   font-family: 'Pontano Sans', sans-serif;
@@ -63,7 +63,7 @@ nav a {
 .img-description h2 {
 	font-family: 'Ruda', sans-serif;
   font-size: 24px;
-  color: #0e3c6d;
+  color: #0f56a2;
   position: relative;
   text-align: left;
 } 
@@ -73,4 +73,28 @@ nav a {
 	line-height: 22px;
 	margin-top: 0;
 }
-
+.early-news {
+  display: inline-block;
+  width: 35%;
+  border: 1px solid #ededed;
+  margin: 10px 10px;
+  padding: 5px;
+}
+.title {
+  font-family: 'Ruda', sans-serif;
+  font-size: 24px;
+  color: #0f56a2;
+  position: relative;
+  text-align: left;
+}
+.img {
+  float: left;
+  width: 100px;
+  height: 100px;
+  margin:0 10px 10px 10px;
+}
+.text{
+  text-align: left;
+  line-height: 22px;
+  margin-top: 0;
+}
