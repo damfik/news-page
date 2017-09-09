@@ -1,16 +1,17 @@
 body, html {
-	padding: 0;
+  padding: 0;
   margin: 0;
   background-color: #fdfdfd;
   text-align: left;
 }
 nav {
-	display: inline-block;
+  display: inline-block;
   background-color: #214055;
   width: 100%;
   font-size: 12px;
   padding: 0 80px;
   box-sizing: border-box;
+  height: 36px;
 }
 nav a {
   text-decoration: none;
@@ -21,19 +22,21 @@ nav a {
   font-weight: 600;
 }
 #input {
-	float: right;
+  float: right;
   margin-right: 80px;
   position: relative;
 }
 .main-content {
-	width: 100%;
+  width: 100%;
   background-color: #eee;
+  min-height: calc(100vh - 36px);
   position: relative;
   height: 100%;
 }
 .sub-content {
   margin-right: 8%;
   margin-left: 8%;
+  min-height: calc(100vh - 36px);
   width: 80%;
   background-color: #fff;
   position: relative;
@@ -41,17 +44,26 @@ nav a {
   box-shadow: 1px 2px 2px #eaeaea;
 }
 .recent-news {
-	display: inline-block;
+  display: inline-block;
   width: 70%;
   border: 1px solid #ededed;
   margin: 10px 10px;
   padding: 5px;
 }
-.recent-img img {
+.recent-img {
   float: left;
-  width: 350px;
+  display: inline-block;
+  margin: 0 20px 10px 0;
+  position: relative;
   height: 250px;
-  margin:0 20px 10px 10px;
+  width: 350px;
+  overflow: hidden;
+}
+.recent-img img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 350px;
 }
 .img-description h4 {
   font-family: 'Pontano Sans', sans-serif;
@@ -61,7 +73,7 @@ nav a {
   text-transform: uppercase;
 }
 .img-description h2 {
-	font-family: 'Ruda', sans-serif;
+  font-family: 'Ruda', sans-serif;
   font-size: 24px;
   color: #0f56a2;
   position: relative;
@@ -69,9 +81,9 @@ nav a {
 } 
 
 .img-description p {
-	text-align: left;
-	line-height: 22px;
-	margin-top: 0;
+  text-align: left;
+  line-height: 22px;
+  margin-top: 0;
 }
 .early-news {
   display: inline-block;
@@ -97,4 +109,54 @@ nav a {
   text-align: left;
   line-height: 22px;
   margin-top: 0;
+}
+.other-news-container {
+  display: inline-block;
+  width: 70%;
+  border: 1px solid #ededed;
+  margin: 10px 10px;
+  padding: 5px;
+}
+.other-news {
+  box-sizing: border-box;
+  display: inline-block;
+  position: relative;
+  padding: 5px;
+  margin: 10px 0;
+  min-height: 300px;
+  height: auto;
+  width: 49%;
+  vertical-align: top;
+}
+.other-news-header {
+  display: block;
+  text-align: left;
+}
+.other-news-header span {
+  color: #203258;
+  font-size: 16px;
+}
+.other-news-header h4 {
+  font-family: 'Ruda', sans-serif;
+  color: #203258;
+  font-size: 20px;
+}
+.other-news-content {
+  display: block;
+}
+.other-news-content .recent-img {
+  height: 200px;
+  width: 45%;
+}
+.other-news-content .recent-img img {
+  width: 100%;
+}
+.other-news-actions {
+  text-align: right;
+}
+.other-news-actions button {
+  color: #203258;
+  font-weight: 600;
+  background-color: white;
+  border: 1px solid LightGrey;
 }
