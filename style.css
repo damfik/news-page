@@ -20,6 +20,9 @@ nav a {
   height: 36px;
   font-weight: 600;
 }
+.container {
+  min-width: 920px;
+}
 .input-container {
   display: inline-block;
   float: right;
@@ -55,6 +58,7 @@ nav a {
   margin-left: 8%;
   min-height: calc(100vh - 36px);
   width: 80%;
+  min-width: 720px;
   background-color: #fff;
   padding: 10px;
   position: relative;
@@ -313,21 +317,42 @@ nav a {
 .footer-content-right  {
   float: right;
 }
+.subscribe-rss {
+  margin: 0;
+  padding: 10px 10px 0;
+}
 .rss_icon_small {
-  position: absolute;
-  left: 2px;
-  top: 12px;
-  height: 12px;
-  width: 12px;
-  z-index: 2;
+  display: inline-block;
+  position: relative;
+  height: 18px;
+  width: 18px;
+  margin: 0;
+  padding: 0;
+}
+.sp {
+  margin-bottom: 5px;
+  width: calc(100% - 84px);
 }
 .sp span {
+  color: gray;
+  font-size: 12px;
+  font-weight: 600;
+  vertical-align: top;
   display: inline-block;
   position: relative;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  overflow:hidden !important;
+  white-space: nowrap;
+  width: 80%;
 }
-.input input{
+ .email-input{
+  box-sizing: border-box;
   display: inline-block;
   position: relative;
+  padding-left: 10px;
+  width: calc(100% - 84px);
+  height: 30px;
 }
 .rss_icon_big {
   display: inline-block;
