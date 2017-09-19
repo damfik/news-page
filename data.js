@@ -74,3 +74,64 @@ const allNews = [
   	createdAt: timeNow
   },
 ];
+
+const columnNews = [
+  {
+    id: "t1",
+    title: "Popular Post",
+    list1: "Make Money Online",
+    list2: "Top 100 Internet Marketing",
+    list3: "Tutorial: How to add videos in your post",
+    list4: "Sample post unorder list",
+    list5: "Sample Post Blockquote"
+  },
+  {
+    id: "t2",
+    title: "Tags"
+  }
+  {
+    id: "t3",
+    title: "Categories",
+    list1: "Enternainment",
+    list2: "Fashion",
+    list3: "Lifestyle",
+    list4: "Parenting",
+    list5: "Resources",
+    list6: "Videos"
+  },
+  {
+    id: "t3",
+    title: "Archives",
+    list1: "August 2008",
+    list2: "July 2008",
+    list3: "June 2008",
+    list4: "May 2008",
+    list5: "April 2008",
+    list6: "March 2008"
+  },
+  {
+    id: "t4",
+    title: "Pages",
+    list1: "Home",
+    list2: "About",
+    list3: "Archives",
+    list4: "Links",
+    list5: "Contact",
+    list6: "Sitemap"
+  },
+  {
+    id: "t5",
+    title: "Blogroll",
+    list1: "Carlos",
+    list2: "Digital Point Forum",
+    list3: "Eric's Photo Gallery",
+    list4: "Fashion Trends",
+    list5: "Google Scoreboard",
+    list6: "Marketing Forum"
+  },
+  {
+    id: "t6",
+    title: "Meta",
+    list1: "Login"
+  },
+];

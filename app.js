@@ -4,12 +4,14 @@ $(function() {
   var navItems = headerNavItems;
   var newsFiltered = allNews;
   var searchNews = '';
+  var tagsInfo = columnNews;
   
   // Initiol actions
   function onInit() {
     console.log('App started!');
     renderNavMenu();
     renderOtherNews();
+    renderTegNews()
   }
   
   // Generate navigation links
@@ -17,6 +19,15 @@ $(function() {
     var nav = $('#navMenu');
     for (var i = 0; i < navItems.length; i++) {
       nav.append('<a href = "' + navItems[i].href + '" target = "_blank">' + navItems[i].name + '</a>');
+    }
+  }
+
+  // Generate tags info
+
+  function renderTegNews() {
+    var infoNews = $('#navListItem');
+    for (var a = 0; a < tagsInfo.length; a++) {
+      infoNews.append();
     }
   }
 
