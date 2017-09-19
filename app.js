@@ -11,7 +11,7 @@ $(function() {
     console.log('App started!');
     renderNavMenu();
     renderOtherNews();
-    renderTegNews()
+    renderTagNews();
   }
   
   // Generate navigation links
@@ -24,10 +24,17 @@ $(function() {
 
   // Generate tags info
 
-  function renderTegNews() {
-    var infoNews = $('#navListItem');
-    for (var a = 0; a < tagsInfo.length; a++) {
-      infoNews.append();
+  function renderTagNews() {
+    for (var propName in columnNews) {
+//       columnNews.tagList.items
+//       columnNews['tagList'].items
+      var listContainer = $('#' + propName);
+      listContainer.html('');
+      for (var a = 0; a < columnNews[propName].items.length; a++) {
+        listContainer.append(
+          '<li><a href="#" target = "_self" title="' + columnNews[propName].items[a] + '">' + columnNews[propName].items[a] + '</a></li>'
+        );
+      }
     }
   }
 
@@ -63,25 +70,25 @@ $(function() {
   
   // Filter new by search text value
   function filterNews(searchText) {
-  	if (searchText) {
-    	// Filtering goes here
+    if (searchText) {
+      // Filtering goes here
       var filtered = [];
       // In loop compare news with searchText
       for (var i = 0; i < allNews.length; i++) {
         // Check if title includes searchText. We get bool true/false
-      	var foundInTitle = allNews[i].title.toLowerCase().indexOf(searchText.toLowerCase()) !== -1;
+        var foundInTitle = allNews[i].title.toLowerCase().indexOf(searchText.toLowerCase()) !== -1;
         // Check if fullDescription includes searchText. We get bool true/false
         var foundInDescription = allNews[i].fullDescription.toLowerCase().indexOf(searchText.toLowerCase()) !== -1;
-				// If something found, push this news to filtered array
+        // If something found, push this news to filtered array
         if (foundInTitle || foundInDescription) {
-        	filtered.push(allNews[i]);
+          filtered.push(allNews[i]);
         }
       }
       // Update newsFiltered with found news
       newsFiltered = filtered;
     } else {
       // Update news filtered variable with all news
-    	newsFiltered = allNews;
+      newsFiltered = allNews;
     }
     // Invoke clear and rerender filtered news
     renderOtherNews();
@@ -90,7 +97,7 @@ $(function() {
   // Listen on input value change
   $('#newsSearchInput').keyup(function(event) {
     // Get input value from keyup event
-  	const searchValue = event.target.value;
+    const searchValue = event.target.value;
     // Invoke filter news function
     filterNews(searchValue);
   });
@@ -102,6 +109,6 @@ $(function() {
 
 // IIFE - Immediately invoked function expression
 // (function() {
-// 	// Application logic is written here
+//  // Application logic is written here
 // })();
 //
