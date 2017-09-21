@@ -10,6 +10,7 @@ $(function() {
   function onInit() {
     console.log('App started!');
     renderNavMenu();
+    renderRecentNews();
     renderOtherNews();
     renderTagNews();
   }
@@ -68,6 +69,31 @@ $(function() {
     }
   }
   
+ // Generate recent news
+  function renderRecentNews() {
+    var randNewsId = getRandomNewsId(allNews.length-1);
+    var updatedNews = [];
+    for (var n = 0; n < newsFiltered.length; n++) {
+      if (n !== randNewsId) {
+        updatedNews.push(newsFiltered[n]);
+      }
+    }
+    newsFiltered = updatedNews;
+    // Get access to recent news container tag
+    var recentNews = $('#mainNews');
+    // Clear recent news container
+    recentNews.html('');
+    // Append filtered recent news
+    recentNews.append(
+      '<h4>recent news</h4>' +
+      '<h2 class="news-title">' + allNews[randNewsId].title + '</h2>' +
+      '<div class="recent-img">' +
+        '<img src="' + allNews[randNewsId].imgLink + '">' +
+      '</div>' +
+      '<p class="news-inner-text">' + allNews[randNewsId].fullDescription + '</p>'
+    );
+  }
+  
   // Filter new by search text value
   function filterNews(searchText) {
     if (searchText) {
@@ -92,7 +118,12 @@ $(function() {
     }
     // Invoke clear and rerender filtered news
     renderOtherNews();
-  }  
+  } 
+
+  // Returns random number from 0 to maxId value with step 1
+  function getRandomNewsId(maxId) {
+    return Math.floor(Math.random() * maxId);
+  }
   
   // Listen on input value change
   $('#newsSearchInput').keyup(function(event) {
